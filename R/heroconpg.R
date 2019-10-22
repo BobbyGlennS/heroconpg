@@ -23,7 +23,8 @@ create_heroku_pgurl_args <- function(prop, app) {
 #' @examples
 run_unix_cmd <- function(heroku_cli = "/snap/bin/heroku",
                          arguments) {
-  processx::run(heroku_cli, arguments)
+  cmd <- processx::run(heroku_cli, arguments)
+  cmd$stdout
 }
 
 
