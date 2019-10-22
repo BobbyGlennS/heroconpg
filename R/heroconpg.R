@@ -99,6 +99,6 @@ get_con_from_url <- function(db_url) {
 get_con <- function(prop,
                     app,
                     os = "unix") {
-  db_url <- get_heroku_pg_url(prop, app, os = "unix")
+  db_url <- get_heroku_pg_url(prop, app, os = os)
   get_con_from_url(db_url)
 }
